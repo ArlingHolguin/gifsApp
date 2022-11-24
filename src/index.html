@@ -1,13 +1,68 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" class="dark">
+
 <head>
-  <meta charset="utf-8">
-  <title>GifsApp</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>GifsApp</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/img/icons/logo.png">
 </head>
+
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
+    <!-- <script>
+        const sunIcon = document.querySelector(".sun");
+        const moonIcon = document.querySelector(".moon");
+        console.log(sunIcon);
+
+        //theme vars
+        const userTheme = localStorage.getItem("theme");
+        const systemTheme = window.matchMedia('prefers-colors-scheme: dark').matches;
+
+        //icon Toggle
+        const toggleIcon = () => {
+                moonIcon.classList.toggle('display-none');
+                sunIcon.classList.toggle('display-none');
+
+            }
+            // initial check theme
+        const themeCheck = () => {
+            if (userTheme === "dark" || (!userTheme && systemTheme)) {
+                document.documentElement.classList.add('dark');
+                moonIcon.classList.add('display-none');
+                return;
+            }
+            sunIcon.classList.add('display-none');
+        }
+
+        //manual theme switch
+        const themeSwitch = () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                toggleIcon();
+                return;
+            }
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            toggleIcon();
+        }
+
+        //call theme switch on click en buttons
+        // sunIcon.addEventListener('click', themeSwitch);
+        sunIcon.addEventListener("click", () => {
+            themeSwitch();
+        });
+
+        moonIcon.addEventListener("click", () => {
+            themeSwitch();
+        });
+
+
+        //theme invoke
+        themeCheck();
+    </script> -->
 </body>
+
 </html>
